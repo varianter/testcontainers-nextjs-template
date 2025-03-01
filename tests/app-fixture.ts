@@ -53,4 +53,8 @@ test.afterAll(async ({ databaseContainer }) => {
   await databaseContainer.stop();
 });
 
+test.afterEach(async ({ resetDatabase }) => {
+  await resetDatabase();
+});
+
 export { test };

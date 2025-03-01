@@ -5,10 +5,6 @@ test.beforeEach(async ({ page }) => {
   await page.goto("/");
 });
 
-test.afterEach(async ({ resetDatabase }) => {
-  await resetDatabase();
-});
-
 test("can add todo", async ({ page }) => {
   expect(await page.title()).toBe("Todos");
 
